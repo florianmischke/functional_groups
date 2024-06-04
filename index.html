@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="ChemDoodleWeb.css" type="text/css">
+        <script type="text/javascript" src="ChemDoodleWeb.js"></script>
+
+        <title></title>
+    </head>
+    <body>
+
+
+        <script>
+            
+            let molecule = {"m":[{"a":[{"x":240.50000000000003,"y":134.4,"i":"a601","l":"O"},{"x":240.50000000000003,"y":154.4,"i":"a628"},{"x":257.8205080756888,"y":164.4,"i":"a658","l":"O"},{"x":223.17949192431124,"y":164.4,"i":"a688"}],"i":"m601","b":[{"b":0,"e":1,"i":"b629","o":2},{"b":1,"e":2,"i":"b659"},{"b":1,"e":3,"i":"b689"}]}]}
+
+
+
+
+            let mol = myCanvas.getMolecule();
+            // this line converts the Molecule data structure to the JSON protocol Javascript object
+            let dummy = new ChemDoodle.io.JSONInterpreter().molTo(mol);
+            // this line reconstructs the Molecule data structure from the JSON object
+            let reconstructed = new ChemDoodle.io.JSONInterpreter().molFrom(dummy);
+        </script>
+    </body>
+</html>
